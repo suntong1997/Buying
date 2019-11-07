@@ -66,8 +66,6 @@ public class RegisterFragment extends Fragment {
 
         /* 点击按钮注册账号*/
         registerBtn.setOnClickListener((view) -> {
-//            account = accEdt.getText().toString();
-//            password = pwdEdt.getText().toString();
 
             String users = pref.getString("user", null);
             list = gson.fromJson(users, new TypeToken<ArrayList<UserAccount>>() {
