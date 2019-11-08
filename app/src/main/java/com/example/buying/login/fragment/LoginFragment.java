@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.buying.R;
+import com.example.buying.login.LoginActivity;
 import com.example.buying.login.UserAccount;
 import com.example.buying.main.MainActivity;
 import com.google.gson.Gson;
@@ -67,6 +68,15 @@ public class LoginFragment extends Fragment {
         accEdt.setText("");
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (LoginActivity.getAccount!=null){
+            accEdt.setText(LoginActivity.getAccount);
+            LoginActivity.getAccount=null;
+        }
+    }
+
     //初始化数据
     private void initData() {
         pref = getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -82,6 +92,7 @@ public class LoginFragment extends Fragment {
         loginBtn = view.findViewById(R.id.login_button);
         accEdt = view.findViewById(R.id.login_account);
         pwdEdt = view.findViewById(R.id.login_password);
+
     }
 
     @Override

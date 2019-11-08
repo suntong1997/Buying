@@ -96,6 +96,7 @@ public class RegisterFragment extends Fragment {
                 editor.putString("user", user);
                 editor.commit();
                 isExist = false;//重置账号存在标记
+                LoginActivity.getAccount=accEdt.getText().toString();
                 getFragmentManager().popBackStack();//注册完成后回到登录碎片
             }
         });
