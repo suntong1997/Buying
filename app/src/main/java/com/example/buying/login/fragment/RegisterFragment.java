@@ -33,7 +33,7 @@ public class RegisterFragment extends Fragment {
     private Button registerBtn;
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
-    private ArrayList<UserAccount> list;
+    private ArrayList<UserAccount> mList;
 
     private UserAccount userAccount;
 
@@ -68,10 +68,10 @@ public class RegisterFragment extends Fragment {
         registerBtn.setOnClickListener((view) -> {
 
             String users = pref.getString("user", null);
-            list = gson.fromJson(users, new TypeToken<ArrayList<UserAccount>>() {
+            mList = gson.fromJson(users, new TypeToken<ArrayList<UserAccount>>() {
             }.getType());
-            if (list != null) {                   //判断是否有账号存在
-                for (UserAccount aUser : list) {
+            if (mList != null) {                   //判断是否有账号存在
+                for (UserAccount aUser : mList) {
                     if (accEdt.getText().toString().equals(aUser.getAccount())) {    //判断用户账号是否存在
                         isExist = true;
                     }
@@ -82,9 +82,8 @@ public class RegisterFragment extends Fragment {
                 Toast.makeText(getContext(), "账户已存在，请重新输入", Toast.LENGTH_SHORT).show();
                 accEdt.setText("");
                 pwdEdt.setText("");
-
+                isExist = false;//重置账号存在标记
             } else {
-
                 userAccount.setAccount(accEdt.getText().toString());
                 userAccount.setPassword(pwdEdt.getText().toString());
 
@@ -95,8 +94,8 @@ public class RegisterFragment extends Fragment {
 
                 editor.putString("user", user);
                 editor.commit();
-                isExist = false;//重置账号存在标记
-                LoginActivity.getAccount=accEdt.getText().toString();
+               // isExist = false;//重置账号存在标记
+                LoginActivity.getAccount = accEdt.getText().toString();
                 getFragmentManager().popBackStack();//注册完成后回到登录碎片
             }
         });
@@ -114,7 +113,7 @@ public class RegisterFragment extends Fragment {
         pref = getContext().getSharedPreferences("data", Context.MODE_PRIVATE);
         editor = pref.edit();
         gson = new Gson();
-        list = new ArrayList<>();
+        mList = new ArrayList<>();
         userAccount = new UserAccount();
     }
 }
