@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:focusable="auto"
+            android:inputType="number"
             android:hint="请输入账号" />
     </LinearLayout>
 

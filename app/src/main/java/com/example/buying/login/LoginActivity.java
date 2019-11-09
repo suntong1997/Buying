@@ -12,8 +12,8 @@ import com.example.buying.R;
 import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
-   public static String getAccount=null;
-    public static ArrayList<UserAccount> arrayList=new ArrayList();//存储用户注册的账户，在RegisterFragment中调用，如果账户存在碎片的list中在点击注册后返回到上一个界面list里面内容会消失，老师如果知道原因麻烦和我说下
+   public static String getAccount=null;//存储注册时的账号便于登录界面接收
+    public static ArrayList<UserAccount> arrayList=new ArrayList();//存储用户注册的账户，在RegisterFragment中调用，如果账户存在碎片的list中在点击注册后返回到上一个界面list里面内容会消失
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

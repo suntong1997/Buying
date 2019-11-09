@@ -14,11 +14,16 @@ import com.example.buying.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class homeFragment extends Fragment {
+public class ShopFragment extends Fragment {
 
 
-    public homeFragment() {
+    public ShopFragment() {
         // Required empty public constructor
+    }
+
+    public static ShopFragment newInstance(){
+        ShopFragment shopfragment =new ShopFragment();
+        return shopfragment;
     }
 
 
@@ -26,7 +31,7 @@ public class homeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_shop, container, false);
     }
 
 }

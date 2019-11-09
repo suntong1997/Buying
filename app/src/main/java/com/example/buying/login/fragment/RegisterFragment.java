@@ -78,6 +78,7 @@ public class RegisterFragment extends Fragment {
                 }
             }
 
+            //处理账户是否存在逻辑
             if (isExist) {
                 Toast.makeText(getContext(), "账户已存在，请重新输入", Toast.LENGTH_SHORT).show();
                 accEdt.setText("");
