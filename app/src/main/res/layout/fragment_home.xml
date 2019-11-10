@@ -9,21 +9,62 @@
 
     <LinearLayout
         android:id="@+id/toolbar"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#63B8FF"
-        android:orientation="horizontal" />
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/hint" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/code" />
+
+        <EditText
+            android:background="@drawable/edit_tixt_style"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="北京"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
 
     <LinearLayout
-
         android:layout_width="match_parent"
-        android:layout_height="195dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
+        android:layout_height="190dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:layout_below="@id/toolbar"
             android:orientation="horizontal">
 
@@ -35,9 +76,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/car" />
 
                 <TextView
@@ -45,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="车票"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -58,9 +100,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/fly1" />
 
                 <TextView
@@ -68,7 +111,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="飞机"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
+
 
             </LinearLayout>
 
@@ -81,9 +125,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/autombile1" />
 
                 <TextView
@@ -91,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="火车"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -104,9 +149,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/cake" />
 
 
@@ -115,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="蛋糕"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -124,7 +170,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:layout_below="@id/toolbar"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
@@ -137,17 +183,18 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/food" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="food"
-                    android:textSize="20sp" />
+                    android:text="食物"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -160,9 +207,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/cp" />
 
                 <TextView
@@ -170,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="电脑"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -183,9 +231,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/watch" />
 
                 <TextView
@@ -193,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="手表"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -206,9 +255,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/phone" />
 
 
@@ -217,7 +267,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="手机"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -226,9 +276,9 @@
     </LinearLayout>
 
     <View
-        android:background="#EDEDED"
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp"
+        android:background="#EDEDED" />
 
 
 </LinearLayout>
