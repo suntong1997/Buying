@@ -9,7 +9,6 @@
 
     <LinearLayout
         android:id="@+id/toolbar"
-
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#63B8FF"
@@ -46,13 +45,13 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
         <ImageView
+
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/arrow"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"/>
-
     </LinearLayout>
 
     <LinearLayout
@@ -164,7 +163,6 @@
                     android:textSize="15sp" />
 
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -280,5 +278,9 @@
         android:layout_height="10dp"
         android:background="#EDEDED" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
