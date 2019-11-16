@@ -1,4 +1,4 @@
-package com.example.buying.main;
+package com.example.buying.main.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,14 +16,13 @@ import com.example.buying.main.bean.GoodsDetail;
 import java.util.ArrayList;
 
 public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapter.MyViewHolder> {
-    ArrayList<GoodsDetail> mList = new ArrayList<>();
+    ArrayList<GoodsDetail> mList ;
     Context mContext;
 
-    void HomeRecyclerAdapter(ArrayList<GoodsDetail> list, Context context) {
+    public HomeRecyclerAdapter(ArrayList<GoodsDetail> list, Context context) {
         this.mList = list;
         this.mContext = context;
     }
-
 
     @NonNull
     @Override

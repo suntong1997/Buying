@@ -14,8 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.buying.R;
-import com.example.buying.main.HomeRecyclerAdapter;
+import com.example.buying.main.Adapter.HomeRecyclerAdapter;
 import com.example.buying.main.bean.GoodsDetail;
+import com.example.buying.main.model.AppAsyncTask;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
 
+    String dataUrl="http://www.imooc.com/api/shopping?type=11";
 
     ArrayList<GoodsDetail> mList;
 
@@ -57,11 +59,14 @@ public class HomeFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         LinearLayoutManager manager=new LinearLayoutManager(getContext());
+
+        AppAsyncTask asyncTask= (AppAsyncTask) new AppAsyncTask(dataUrl).execute();//获取接收的数据
+
+        mList=asyncTask.getResultData().getmList();//存储item列表数据
+
         recyclerView.setLayoutManager(manager);
-        HomeRecyclerAdapter adapter;
-
-
-
+        HomeRecyclerAdapter adapter=new HomeRecyclerAdapter(mList,getContext());
+        recyclerView.setAdapter(adapter);
 
     }
 }
