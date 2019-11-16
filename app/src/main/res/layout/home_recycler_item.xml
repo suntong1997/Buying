@@ -51,7 +51,7 @@
                 tool:text="$39.9" />
 
             <TextView
-                android:id="@+id/goods_new_user"
+                android:id="@+id/goods_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

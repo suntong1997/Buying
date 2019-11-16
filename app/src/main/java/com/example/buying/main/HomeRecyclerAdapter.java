@@ -40,7 +40,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
         holder.goodsName = mList.get(position).getGoodsName();
         holder.gooodsDesc = mList.get(position).getGooodsDesc();
         holder.goodsPrice = mList.get(position).getGoodsPrice();
-        holder.goodsNewUser = mList.get(position).getGoodsNewUser();
+        holder.goodsAction = mList.get(position).getGoodsAction();
         holder.goodsSold = mList.get(position).getGoodsSold();
     }
 
@@ -54,7 +54,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
         TextView goodsName;
         TextView gooodsDesc;
         TextView goodsPrice;
-        TextView goodsNewUser;
+        TextView goodsAction;
         TextView goodsSold;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -63,7 +63,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
             goodsName = itemView.findViewById(R.id.goods_name);
             gooodsDesc = itemView.findViewById(R.id.goods_desc);
             goodsPrice = itemView.findViewById(R.id.goods_price);
-            goodsNewUser = itemView.findViewById(R.id.goods_new_user);
+            goodsAction = itemView.findViewById(R.id.goods_action);
             goodsSold = itemView.findViewById(R.id.goods_sold);
         }
     }

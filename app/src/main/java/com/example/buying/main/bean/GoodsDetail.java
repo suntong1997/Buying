@@ -8,15 +8,15 @@ public class GoodsDetail {
     TextView goodsName;
     TextView gooodsDesc;
     TextView goodsPrice;
-    TextView goodsNewUser;
+    TextView goodsAction;
     TextView goodsSold;
 
-    public GoodsDetail(ImageView goodsImage, TextView goodsName, TextView gooodsDesc, TextView goodsPrice, TextView goodsNewUser, TextView goodsSold) {
+    public GoodsDetail(ImageView goodsImage, TextView goodsName, TextView gooodsDesc, TextView goodsPrice, TextView goodsAction, TextView goodsSold) {
         this.goodsImage = goodsImage;
         this.goodsName = goodsName;
         this.gooodsDesc = gooodsDesc;
         this.goodsPrice = goodsPrice;
-        this.goodsNewUser = goodsNewUser;
+        this.goodsAction = goodsAction;
         this.goodsSold = goodsSold;
     }
 
@@ -52,12 +52,12 @@ public class GoodsDetail {
         this.goodsPrice = goodsPrice;
     }
 
-    public TextView getGoodsNewUser() {
-        return goodsNewUser;
+    public TextView getGoodsAction() {
+        return goodsAction;
     }
 
-    public void setGoodsNewUser(TextView goodsNewUser) {
-        this.goodsNewUser = goodsNewUser;
+    public void setGoodsAction(TextView goodsAction) {
+        this.goodsAction = goodsAction;
     }
 
     public TextView getGoodsSold() {
